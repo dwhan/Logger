@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:iconSpaceReserved="false">
+
+    <PreferenceCategory
+        android:title="RSLogger"
+        app:iconSpaceReserved="false">
+
+        <CheckBoxPreference
+            android:key="key_init"
+            android:title="Activate"
+            android:summary="RSLogger build(level,file,enable options..."
+            android:icon="@drawable/ic_launcher_foreground"
+            android:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Options"
+        app:iconSpaceReserved="false">
+
+        <ListPreference
+            android:key="key_level"
+            android:title="logLevel"
+            android:summary="set log level"
+            android:entries="@array/action_list"
+            android:entryValues="@array/action_values"
+            android:dialogTitle="set log level" />
+        <SeekBarPreference
+            android:key="key_file_size_seek"
+            android:title="maxFileSize"
+            android:summary="MB"
+            android:max="50"
+            android:defaultValue="0" />
+
+        <SeekBarPreference
+            android:key="key_period_day_seek"
+            android:title="maxPeriodDay"
+            android:summary="MB"
+            android:max="30"
+            android:defaultValue="0" />
+        <SwitchPreference
+            android:key="key_admin_logger_on"
+            android:title="enableAdminLogger"
+            android:defaultValue="false"/>
+
+        <SwitchPreference
+            android:key="key_crash_report_on"
+            android:title="enableCrashReporting"
+            android:defaultValue="false"/>
+
+        <SwitchPreference
+            android:key="key_uievent_on"
+            android:title="enableUIEventLogging"
+            android:defaultValue="false"/>
+
+        <Preference android:title="Configure"
+            android:key="key_configure"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="Apply options"/>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="TestCase"
+        app:iconSpaceReserved="false">
+
+        <!--<EditTextPreference-->
+        <!--android:key="key_edit_log"-->
+        <!--android:title="Edit log"-->
+        <!--android:summary="Edit your log"-->
+        <!--android:dialogTitle="Edit your log"-->
+        <!--app:iconSpaceReserved="false"/>-->
+
+        <ListPreference
+            android:key="key_log_level"
+            android:title="Test LogLevel"
+            android:summary="log level"
+            android:entries="@array/action_list"
+            android:entryValues="@array/action_values"
+            android:dialogTitle="log level"
+            android:icon="@drawable/ic_launcher_foreground" />
+
+        <Preference android:title="Logging"
+            android:key="key_logging"
+            android:summary="This is a logging button"/>
+
+        <Preference android:title="Test CrashLog (force crash)"
+            android:key="key_force_crash"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="This is a crash button"/>
+
+        <Preference android:title="Has last CrashLog?"
+            android:key="key_check_crashlog"
+            android:summary="This is a check crash button"/>
+
+        <Preference android:title="Get CrashLog and reset"
+            android:key="key_get_crashlog"
+            android:summary="This is a get crash and flush"/>
+
+        <Preference android:title="Test FileLog (BASE)"
+            android:key="key_check_filelog"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="This is a check logfile button"/>
+
+        <Preference android:title="Test FileLog (ADMIN)"
+            android:key="key_check_adminlog"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="This is a check adminlog button"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="Extension"
+        app:iconSpaceReserved="false">
+
+        <Preference android:title="Send to Mail"
+            android:key="key_send_mail"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="This is a check logfile button"/>
+
+        <Preference android:title="Print to floatingView"
+            android:key="key_print_view"
+            android:icon="@drawable/ic_launcher_foreground"
+            android:summary="This is a check adminlog button"/>
+
+        <PreferenceScreen
+            android:title="Go to android.com"
+            android:summary="browse android.com"
+            app:iconSpaceReserved="false">
+            <intent android:action="android.intent.action.VIEW"
+                android:data="http://www.android.com" />
+        </PreferenceScreen>
+
+        <Preference android:title="My Preference title" >
+            <intent android:targetPackage="com.raonsecure.rslsample"
+                android:targetClass="com.raonsecure.rslsample.UIEventTestActivity"/>
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

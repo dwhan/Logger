@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="action_list">
+        <item>Verbose</item>
+        <item>Debug</item>
+        <item>Info</item>
+        <item>Warning</item>
+        <item>Error</item>
+    </string-array>
+    <string-array name="action_values">
+        <item>RSLogLevelVerbose</item>
+        <item>RSLogLevelDebug</item>
+        <item>RSLogLevelInfo</item>
+        <item>RSLogLevelWarning</item>
+        <item>RSLogLevelError</item>
+    </string-array>
+</resources>

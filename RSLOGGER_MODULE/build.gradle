@@ -1,0 +1,72 @@
+apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.jfrog.bintray'
+
+publish {
+    userOrg = 'dongwook'
+    groupId = 'com.raonsecure.rslogger'
+    artifactId = 'rslogger'
+    publishVersion = '0.1.0'
+    desc = 'https://gitlab.com/dongwookq/rslogger_android'
+    website = 'https://gitlab.com/dongwookq/rslogger_android'
+    issueTracker = "https://gitlab.com/dongwookq/rslogger_android/issues"
+    repository = "https://gitlab.com/dongwookq/rslogger_android.git"
+}
+
+//publish {
+//    def groupProjectID = 'com.raonsecure.rslogger'
+//    def artifactProjectID = 'RSLOGGER_MODULE'
+//    def publishVersionID = '0.1.0'
+//
+//    userOrg = 'dongwookq'
+//    repoName = 'maven'
+//    groupId = groupProjectID
+//    artifactId = artifactProjectID
+//    publishVersion = publishVersionID
+//    desc = '{library description}'
+//    website = 'https://gitlab.com/dongwookq/rslogger_android'
+//    repository = "https://gitlab.com/dongwookq/rslogger_android.git"
+//}
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+//    implementation 'log4j:log4j:1.2.17'
+//    implementation 'de.mindpipe.android:android-logging-log4j:1.0.3@jar'
+    api 'org.aspectj:aspectjrt:1.9.4'
+
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+}
+
+repositories {
+    flatDir { dirs 'libs' }
+}
+
