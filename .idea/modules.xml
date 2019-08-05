@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Logger.iml" filepath="$PROJECT_DIR$/Logger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RSLOGGER_APP/RSLOGGER_APP.iml" filepath="$PROJECT_DIR$/RSLOGGER_APP/RSLOGGER_APP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/RSLOGGER_MODULE/RSLOGGER_MODULE.iml" filepath="$PROJECT_DIR$/RSLOGGER_MODULE/RSLOGGER_MODULE.iml" />
+    </modules>
+  </component>
+</project>
